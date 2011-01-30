@@ -20,4 +20,4 @@ mkdir -p $backup_dir
 
 export BACKUP_DIR=$backup_dir
 export FILE_PATTERN="dump-$DATABASE-*.gz"
-`dirname $0`/clean-old-backups.sh
+bash `dirname $0`/clean-old-backups.sh
