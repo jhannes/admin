@@ -11,7 +11,7 @@
 #  Optional: ARCHIVE_COUNT how many backups to keep (default 7)
 
 archive_count=${ARCHIVE_COUNT:-7}
-backup_root=${BACKUP_ROOT:-`dirname BACKUP_DIR}
+backup_root=${BACKUP_ROOT:-`dirname BACKUP_DIR`}
 
 # Delete all but the newest $archive_count backups
 (cd $BACKUP_DIR; [ -n "`ls -tr $FILE_PATTERN | head --lines=-$archive_count`" ] && ls -tr $FILE_PATTERN | head --lines=-$archive_count | xargs rm)
