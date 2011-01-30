@@ -13,7 +13,7 @@
 [ -z "$FILE_PATTERN" ] && exit 1
 
 archive_count=${ARCHIVE_COUNT:-7}
-backup_root=`dirname BACKUP_DIR`
+backup_root=`dirname $BACKUP_DIR`
 
 
 # Delete all but the newest $archive_count backups
